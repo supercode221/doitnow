@@ -24,3 +24,5 @@ hs_err_pid*
 replay_pid*
 /doitnow/nbproject/private/
 /nbproject/private/
+/build/
+/dist/
