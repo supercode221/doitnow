@@ -162,7 +162,7 @@
                         </a>
                         <a href="#">Pricing</a>
                         <div class="divide"></div>
-                        <a href="#">Log in</a>
+                        <a href="Login.jsp">Log in</a>
                         <button id="start1">Starts for free</button>
                     </div>
                 </div>
@@ -221,11 +221,11 @@
                 });
 
                 $("#start1").on('click', function () {
-                    location.href = 'User-Section/Public/Register.jsp';
+                    location.href = 'Register.jsp';
                 });
-                
+
                 $("#start2").on('click', function () {
-                    location.href = 'User-Section/Public/Register.jsp';
+                    location.href = 'Register.jsp';
                 });
             });
         </script>

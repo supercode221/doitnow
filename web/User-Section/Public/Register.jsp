@@ -154,7 +154,7 @@
     <body style="padding: 24px;">
         <div class="container">
             <div class="logo" style="padding-bottom: 32px;">
-                <span><a href="#"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
+                <span><a href="HomePage.jsp"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
             </div>
         </div>
 
@@ -200,7 +200,7 @@
                         <p style="font-size: 14px;">By continuing with Google, Apple, or Email, you agree to doitnow’s <a href="#" style="text-decoration: underline;">Terms of Service</a> and <a href="#" style="text-decoration: underline;">Privacy Policy</a>.</p>
                     </div>
                     <div class="divide"></div>
-                    <p style="text-align: center; font-size: 14px;">Already signed up? <a href="#" style="text-decoration: underline;">Go to login</a></p>
+                    <p style="text-align: center; font-size: 14px;">Already signed up? <a href="Login.jsp" style="text-decoration: underline;">Go to login</a></p>
                 </div>
                 <div class="images">
                     <div class="up">
