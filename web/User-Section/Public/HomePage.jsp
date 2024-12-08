@@ -112,21 +112,38 @@
 
             .dropdown-item {
                 margin-bottom: 3px;
-            }
-            
-            .dropdown i{
-                color: #a8a8a8;
-                font-size: 16px;
-            }
-            
-            .dropdown a {
-                font-size: 16px;
                 padding: 5px 10px;
                 border-radius: 10px;
             }
 
-            .dropdown a:hover{
+            .dropdown i{
+                color: #a8a8a8;
+                font-size: 16px;
+            }
+
+            .dropdown a {
+                font-size: 16px;
+                padding: 3px;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .dropdown .dropdown-item:hover{
                 background-color: #eee;
+            }
+
+            .dropdown {
+                position: absolute;
+                background-color: white;
+                box-shadow: 0 0 50px 0 #ffeccc;
+                padding: 10px;
+                border-radius: 10px;
+                top: 75px;
+                right: 585px;
+                z-index: 1002;
+                display: none;
+                border: solid 1px #dddddd;
             }
         </style>
     </head>
@@ -135,21 +152,23 @@
             <div class="container">
                 <div class="header-sticky">
                     <div class="logo">
-                        <span><a href="#"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50">  doit-now</a></span>
+                        <span><a href="#"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
                     </div>
                     <div class="nav-items">
                         <a href="#">Features</a>
                         <a href="#">For Teams</a>
-                        <a href="#" style="display: flex; gap: 10px; align-items: center;">Resources <i class="fa-solid fa-angle-down"></i></a>
+                        <a id="resources" href="#" style="display: flex; gap: 10px; align-items: center; position: relative;">
+                            Resources <i class="fa-solid fa-angle-down"></i>
+                        </a>
                         <a href="#">Pricing</a>
                         <div class="divide"></div>
                         <a href="#">Log in</a>
-                        <button>Starts for free</button>
+                        <button id="start1">Starts for free</button>
                     </div>
                 </div>
                 <div class="dropdown">
                     <div class="dropdown-item">
-                        <a href="#"><i class="fa-solid fa-puzzle-piece"></i> Intergrations</a>
+                        <a href="#"><i class="fa-solid fa-puzzle-piece"></i> Integrations</a>
                     </div>
                     <div class="dropdown-item">
                         <a href="#"><i class="fa-solid fa-puzzle-piece"></i> Templates</a>
@@ -170,7 +189,7 @@
                     <h1 class="title" style="margin-bottom: 24px">Organize your work and life, finally.</h1>
                     <h5 class="des">Simplify life for both you and your team with the world’s #1 task manager and to-do list app.</h5>
                     <h5 class="des" style="margin: 12px 0; padding-bottom: 32px;">374K+ ★★★★★ reviews from.</h5>
-                    <a href="#"><button>Starts for free</button></a>
+                    <a href="#"><button id="start2">Starts for free</button></a>
                 </div>
                 <div class="image">
                     <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fintro%2Fwide%2Fheaderui.en.png" width="700">
@@ -181,6 +200,35 @@
         <footer>
 
         </footer>
+
+        <script>
+            $(document).ready(function () {
+                let hideTimeout;
+
+                $('#resources').on('mouseenter', function () {
+                    clearTimeout(hideTimeout); // Clear any scheduled hide action
+                    $(".dropdown").stop(true, true).fadeIn('fast');
+                });
+
+                $('.dropdown').on('mouseenter', function () {
+                    clearTimeout(hideTimeout); // Clear any scheduled hide action
+                });
+
+                $('#resources, .dropdown').on('mouseleave', function () {
+                    hideTimeout = setTimeout(function () {
+                        $(".dropdown").stop(true, true).fadeOut('fast');
+                    }, 200); // Delay to account for the gap
+                });
+
+                $("#start1").on('click', function () {
+                    location.href = 'User-Section/Public/Register.jsp';
+                });
+                
+                $("#start2").on('click', function () {
+                    location.href = 'User-Section/Public/Register.jsp';
+                });
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
