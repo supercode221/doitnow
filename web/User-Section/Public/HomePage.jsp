@@ -152,7 +152,7 @@
             <div class="container">
                 <div class="header-sticky">
                     <div class="logo">
-                        <span><a href="#"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
+                        <span><a href="homepage"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
                     </div>
                     <div class="nav-items">
                         <a href="#">Features</a>
@@ -162,8 +162,8 @@
                         </a>
                         <a href="#">Pricing</a>
                         <div class="divide"></div>
-                        <a href="Login.jsp">Log in</a>
-                        <button id="start1">Starts for free</button>
+                        <a href="login">Log in</a>
+                        <a href="register"><button>Starts for free</button></a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -189,7 +189,7 @@
                     <h1 class="title" style="margin-bottom: 24px">Organize your work and life, finally.</h1>
                     <h5 class="des">Simplify life for both you and your team with the world’s #1 task manager and to-do list app.</h5>
                     <h5 class="des" style="margin: 12px 0; padding-bottom: 32px;">374K+ ★★★★★ reviews from.</h5>
-                    <a href="#"><button id="start2">Starts for free</button></a>
+                    <a href="register"><button>Starts for free</button></a>
                 </div>
                 <div class="image">
                     <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Ftodoist.com%2Fstatic%2Fhome-teams%2Fintro%2Fwide%2Fheaderui.en.png" width="700">

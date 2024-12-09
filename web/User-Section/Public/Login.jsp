@@ -154,7 +154,7 @@
     <body style="padding: 24px;">
         <div class="container">
             <div class="logo" style="padding-bottom: 32px;">
-                <span><a href="HomePage.jsp"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
+                <span><a href="homepage"><img src="${pageContext.request.contextPath}/Asset/Image/Logo/logo.png" alt="doitnow" width="50"> doit-now</a></span>
             </div>
         </div>
 
@@ -164,7 +164,12 @@
                     <div class="register-section">
                         <p style="font-weight: bold; font-size: 31px; margin-bottom: 20px;">Log in<p>
                         <div class="fast-action">
-                            <a href="#">
+                            <a href="https://accounts.google.com/o/oauth2/auth?scope=profile%20email%20openid%20
+                                   https://www.googleapis.com/auth/userinfo.profile%20
+                                   https://www.googleapis.com/auth/userinfo.email%20
+                                   https://www.googleapis.com/auth/user.phonenumbers.read%20
+                                   https://www.googleapis.com/auth/user.gender.read
+                                   &redirect_uri=http://localhost:9999/doitnow/google&response_type=code&client_id=291530141647-7fu0blmidr83f2qkirhqt8r16457ppdj.apps.googleusercontent.com&approval_prompt=force">
                                 <div class="item">
                                     <i class="fa-brands fa-google "></i>
                                     <p>Continue with Google</p>
